@@ -25,7 +25,39 @@
   }
 }
 
+@media (max-width: 920px) {
+  header {
+    overflow: hidden;
+  }
+  header .container {
+    position: relative;
+    z-index: 10;
+  }
+  header .container .content-block {
+    width: 100%;
+  }
+  header .header-img {
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.5;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+  }
+  header .header-img img {
+    height: 100%;
+    width: auto;
+  }
+  header .header-img object {
+    display: none;
+  }
+}
+
 @media (max-width: 1100px) {
+  header .content-block {
+    width: 50%;
+  }
   .about .container .info {
     width: 50%;
   }
@@ -54,6 +86,61 @@
 }
 
 @media (max-width: 876px) {
+  .main-form .form-wrapper form button {
+    font-size: 16px;
+  }
+  .main-form .form-wrapper form button .strong {
+    font-size: 18px;
+  }
+  .what-is-it h1, .what-to-recieve h1, .questions .heading-block h1 {
+    width: auto;
+    text-align: start;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .what-is-it h1::before, .what-to-recieve h1::before, .questions .heading-block h1::before {
+    display: none;
+  }
+  .what-is-it h1::after, .what-to-recieve h1::after, .questions .heading-block h1::after {
+    display: none;
+  }
+  .advantages .advantages-row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .advantages .advantages-row .content-block {
+    margin: auto;
+    width: 40% !important;
+  }
+  .advantages .advantages-row .content-block .vector {
+    width: 42px;
+    height: 78px;
+  }
+  .advantages .advantages-row .content-block.big {
+    cursor: pointer;
+    height: 170px;
+    position: relative;
+    padding: 30px 20px;
+    width: 18%;
+  }
+  .advantages .advantages-row .content-block.big h2 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+  .advantages .advantages-row .content-block.big p {
+    margin: 0;
+    width: 70%;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .advantages .advantages-row .content-block.big .vector {
+    width: 42px;
+  }
+  .advantages .advantages-row .content-block.big .corner {
+    width: 35px;
+  }
   footer img {
     margin: 0 30px;
   }
@@ -98,6 +185,27 @@
 }
 
 @media (max-width: 768px) {
+  .what-to-recieve .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .what-to-recieve .container .txt-content {
+    text-align: start;
+  }
+  .what-to-recieve .container .txt-content button {
+    margin: auto;
+  }
+  .what-to-recieve .container .txt-content #focus {
+    display: none;
+  }
+  .what-to-recieve .container .img-content img {
+    width: 50%;
+  }
+  .what-to-recieve .container .txt-content #txt-points-btm {
+    right: 30px;
+  }
   footer {
     padding: 30px 0;
   }
@@ -135,6 +243,37 @@
 }
 
 @media (max-width: 576px) {
+  .questions .question .wrapper h3 {
+    margin: 10px 0;
+  }
+  .advantages .advantages-row .content-block {
+    height: 220px;
+    width: 35% !important;
+  }
+  .advantages .advantages-row .content-block p {
+    width: 100%;
+  }
+  .advantages .advantages-row .content-block.big {
+    height: 220px;
+  }
+  .advantages .advantages-row .content-block.big p {
+    width: 100%;
+  }
+  .advantages .heading-block h1 {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header ul li:last-child {
+    margin-top: 20px;
+  }
   .about .container .img-block {
     height: 550px;
   }
@@ -167,6 +306,9 @@
   }
   .main-form .form-wrapper form button {
     width: 100%;
+  }
+  .main-form .form-wrapper form button span {
+    margin: 0 10px;
   }
   .main-form .form-wrapper .form-img {
     width: auto;

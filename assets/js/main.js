@@ -8,7 +8,12 @@ sendData();
     
 $('a[href*=\\#]').on('click', function(event){     
   event.preventDefault();
-  $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 500);
+  if(this.hash == '#what-to-recieve'){
+    $('html,body').animate({scrollTop:$(this.hash).offset().top }, 500);
+  }else{
+    $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 500);
+  }
+  
 });
 
   function setHeightData(){
@@ -29,10 +34,13 @@ $('a[href*=\\#]').on('click', function(event){
     const answer = this.closest('.question').querySelector('.answer');
     if(answer.classList.contains('close')){
         answer.classList.remove('close');
+       
+        
         this.querySelector('h1').textContent = '-';
         let currHeight = answer.getAttribute('data-height');
         answer.style.height = `${currHeight}px`;
     }else{
+      
         this.querySelector('h1').textContent = '+';
         answer.classList.add('close');
         answer.style.height = '0px';
